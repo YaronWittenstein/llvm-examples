@@ -7,6 +7,7 @@ use inkwell::OptimizationLevel;
 mod add_fn;
 mod const_fn;
 mod greater_than;
+mod stack_tuple;
 
 mod tests {
     use super::*;
@@ -81,6 +82,24 @@ mod tests {
             assert_eq!(false, func.call(10));
             assert_eq!(false, func.call(9));
             assert_eq!(false, func.call(-1));
+        }
+    }
+
+    #[test]
+    fn test_llvm_stack_tuple() {
+        let fn_name = "stack_tuple";
+
+        let module = stack_tuple::build_module(fn_name);
+
+        unsafe {
+            let func =
+                get_runnable_func::<unsafe extern "C" fn(i32, i32) -> [i32; 3]>(module, fn_name)
+                    .unwrap();
+
+            let a = 20;
+            let b = 30;
+
+            assert_eq!([a, 0, b], func.call(a, b));
         }
     }
 }
