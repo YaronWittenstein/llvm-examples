@@ -1,5 +1,4 @@
 extern crate inkwell;
-extern crate llvm_sys;
 
 use inkwell::execution_engine::ExecutionEngine;
 use inkwell::module::Module;
