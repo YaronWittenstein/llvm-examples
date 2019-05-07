@@ -1,7 +1,6 @@
-use inkwell::context::Context;
-use inkwell::module::{Linkage, Module};
-use inkwell::values::{AnyValueEnum, BasicValueEnum, IntValue, PointerValue};
+use inkwell::module::Module;
 
+#[allow(dead_code)]
 pub fn build_module(fn_name: &str) -> Module {
     let module = Module::create("Add");
 

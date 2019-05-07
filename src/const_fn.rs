@@ -1,6 +1,6 @@
-use inkwell::context::Context;
 use inkwell::module::Module;
 
+#[allow(dead_code)]
 pub fn build_module(fn_name: &str, const_val: i32) -> Module {
     let module = Module::create("Constant");
 

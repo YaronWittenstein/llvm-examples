@@ -1,6 +1,6 @@
 ## LLVM Examples
 
-This repository contains _Rust_ examples using using the great [inkwell](https://thedan64.github.io/inkwell/inkwell/) crate
+This repository contains _Rust_ examples using the great [inkwell](https://thedan64.github.io/inkwell/inkwell/) crate
 
 
 ### Tests:
