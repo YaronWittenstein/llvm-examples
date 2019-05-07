@@ -1,0 +1,10 @@
+[package]
+name = "llvm-examples"
+version = "0.0.0"
+authors = ["Yaron Wittenstein <yaron.wittenstein@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+llvm-sys = "70.0"
+inkwell = { git = "https://github.com/TheDan64/inkwell", branch = "llvm7-0" }
+memmap = "0.7.0"
